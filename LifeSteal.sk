@@ -1,0 +1,14 @@
+on death of player:
+	if the attacker is a player:
+		if victim's max health is 1:
+			send "&c%victim% only has 1 heart!" to attacker
+			send "&cYou cannot lose a heart, since you are already on 1 heart." to victim
+		else:
+			remove 1 from the victim's max health
+			wait 1 tick
+			add 1 to the attacker's max health
+ 
+on load:
+	loop all players:
+		if loop-player has permission "*":
+			send "&bLifeSteal Skript made by &6https://github.com/n-ikko" to loop-player
